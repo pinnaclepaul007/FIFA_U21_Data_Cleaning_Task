@@ -1,6 +1,6 @@
 # FIFA_21_Data_Cleaning_Task
 
-![image](https://user-images.githubusercontent.com/105908253/226148211-70f194f3-12d2-4c85-bfc7-b122edee5322.png)
+![download](https://user-images.githubusercontent.com/105908253/226148262-bcbe00cd-63b1-4757-85da-d986ba03d2d0.jpg)
 
 # Introduction:
 A data cleaning task was introduced using the hashtag #datacleaningchallenge to allow beginners, intermediate and pro data analyst in the tech space to exercise their skills using any tool of their choice.
