@@ -1,6 +1,6 @@
 # FIFA_21_Data_Cleaning_Task
 
-![image](https://user-images.githubusercontent.com/105908253/226148154-288dc068-a6d7-42fd-a74c-a509447b4ac9.png)
+![image](https://user-images.githubusercontent.com/105908253/226148211-70f194f3-12d2-4c85-bfc7-b122edee5322.png)
 
 # Introduction:
 A data cleaning task was introduced using the hashtag #datacleaningchallenge to allow beginners, intermediate and pro data analyst in the tech space to exercise their skills using any tool of their choice.
@@ -15,7 +15,7 @@ The dataset contains 18979 rows and 77 columns. The datafile also include a data
 
 # Data Cleaning Process:
 
- ![image](https://user-images.githubusercontent.com/105908253/226147091-6ff39745-1e10-4b55-8471-268933df9ea5.png)
+ ![image](https://user-images.githubusercontent.com/105908253/226148154-288dc068-a6d7-42fd-a74c-a509447b4ac9.png)
 
 The dataset was imported into the power query editor and loaded for transformation.
 Walk with me as I take you through the step-by-step process of cleaning the dataset from its messy state to a clean state ready to use for analysis.
