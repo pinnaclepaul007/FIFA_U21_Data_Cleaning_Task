@@ -127,4 +127,4 @@ After a thorough checking and cross-checking for errors, missing values, empty c
 I’m glad I participated in this challenge to horn and sharpen skill. Quite a lot of learning I did while taking up this task. What initially looked difficult and impossible has been done. Good to say I’m proud of myself.
 
 
-Thank you for reading through. I hope you find this worth reading and helpful. If you need my support on working on this dataset, you can reach me on twitter @pinnacle_paul and LinkedIn @PaulAderounmu
+Thank you for reading through. I hope you find this worth reading and helpful. If you need my support on working on this dataset, you can reach me on twitter [@pinnacle_paul](https://twitter.com/pinnacle_paul) and LinkedIn [@PaulAderounmu](https://www.linkedin.com/in/pauladerounmu)
