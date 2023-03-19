@@ -72,6 +72,7 @@ The ‘loan date end’ column has 97% empty rows. This is because the players o
 ![image](https://user-images.githubusercontent.com/105908253/226147406-0600d868-edb2-4ef6-88eb-3eec6a6e829d.png)
 
 To solve the problem, I replaced the empty cells with ‘Null’.
+
 ![image](https://user-images.githubusercontent.com/105908253/226147409-4e1fba84-e809-4fba-9183-22c4a55ef108.png)
 
 # Height & Weight:
@@ -118,6 +119,7 @@ The column had a text data type and contained numbers in tens, hundreds, and tho
 ![image](https://user-images.githubusercontent.com/105908253/226147529-152cb3cc-43a5-46ed-a63d-911051459427.png)
 
 A custom column was created to multiply the values with ‘K’ by 1000 using the formula =IF Text.Contains(Hits),”K”) then Number.From(Text.BeforeDelimiter([Hits],”K”))*1000 else Text.BeforeDelimiter([Hits],”K”))
+
 ![image](https://user-images.githubusercontent.com/105908253/226147532-2a946f6d-4299-432c-9c55-3014672dac72.png)
 
 # Conclusion:
