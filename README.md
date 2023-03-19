@@ -1,4 +1,4 @@
-# FIFA_U21_Data_Cleaning_Task
+# FIFA_21_Data_Cleaning_Task
 
 ![image](https://user-images.githubusercontent.com/105908253/226147038-1ef3187d-1eae-4b2f-ae0d-c470b83fd63c.png)
 
