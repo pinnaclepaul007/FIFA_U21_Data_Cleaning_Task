@@ -6,7 +6,7 @@
 A data cleaning task was introduced using the hashtag #datacleaningchallenge to allow beginners, intermediate and pro data analyst in the tech space to exercise their skills using any tool of their choice.
 Power Query on Power BI was used as my preferred tool for this task
 
-# About the Dataset:
+# Dataset Description:
  
  ![image](https://user-images.githubusercontent.com/105908253/226147063-06738ed6-5562-40fc-89c4-e4fcfffdb1d3.png)
 
