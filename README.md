@@ -4,21 +4,21 @@
 
 # Introduction:
 A data cleaning task was introduced using the hashtag #datacleaningchallenge to allow beginners, intermediate and pro data analyst in the tech space to exercise their skills using any tool of their choice.
-Power Query on Power BI was used as my preferred tool for this task
+Power Query on Power BI was used as my preferred tool for this task.
 
 # Dataset Description:
  
  ![image](https://user-images.githubusercontent.com/105908253/226147063-06738ed6-5562-40fc-89c4-e4fcfffdb1d3.png)
 
-The dataset used for this challenge is the FIFA-U21 data. The dataset was sourced from [Kaggle.com](https://www.kaggle.com/datasets/yagunnersya/fifa-21-messy-raw-dataset-for-cleaning-exploring). The dataset was obtained in its raw state after web scrapping from sofifa.com. It contains the details of football players alongside the performance.
-The dataset contains 18979 rows and 77 columns. The datafile also include a data dictionary to further give the data analyst more insight on the player information.
+The dataset used for this challenge is the FIFA-21 data. The dataset was sourced from [Kaggle.com](https://www.kaggle.com/datasets/yagunnersya/fifa-21-messy-raw-dataset-for-cleaning-exploring). The dataset was obtained in its raw state after web scrapping from sofifa.com. It contains the details of football players alongside the performance.
+The dataset contains 18979 rows and 77 columns. The data file also include a data dictionary to further give the data analyst more insight on the player information.
 
 # Data Cleaning Process:
 
  ![image](https://user-images.githubusercontent.com/105908253/226148154-288dc068-a6d7-42fd-a74c-a509447b4ac9.png)
 
 The dataset was imported into the power query editor and loaded for transformation.
-Walk with me as I take you through the step-by-step process of cleaning the dataset from its messy state to a clean state ready to use for analysis.
+Walk with me as I take you through the step-by-step process of cleaning the dataset from its messy state to a clean state. This cleaned data can be use for analysis.
 
 # ID, Name & Long Name: 
 The ID column contains the unique number assigned to every player. The data type was converted to numbers. The ‘Name’ column contains the players short name while the ‘Long Name’ column contains the players full name. The column name was changed to ‘Full Name’.
@@ -28,12 +28,12 @@ The ID column contains the unique number assigned to every player. The data type
 ![image](https://user-images.githubusercontent.com/105908253/226147115-018e15ea-5209-428c-9dc7-e92477cab41a.png)
 
 # PhotoURL, PlayerURL & Nationality:
-The ‘PhotoUrl’ and ‘PlayerUrl’ columns contains the players’ photo and full names embedded in its URL, while the ‘Nationality’ column contain the players country of origin. The decision to retain the ‘PhotoUrl & PlayerUrl’ column was based on the purpose of this challenge which was to clean the data. 
+The ‘PhotoUrl’column and ‘PlayerUrl’ column contains the players’ photo and full names embedded in its URL, while the ‘Nationality’ column include the players country of origin. The decision to retain the ‘PhotoUrl & PlayerUrl’ column was based on the purpose of this challenge which is to clean the data. 
 
 ![image](https://user-images.githubusercontent.com/105908253/226147150-7df4be7b-f4e5-4a95-bcca-f2c8a6652b84.png)
 
 # Age, OVA & POT:
-The ‘Age’ column contains the age of individual players. The column was converted to number data type. The Overall Players’ Analysis (OVA) and Players Potential (POT) column were converted to percentage as written in the data dictionary. A custom column was used to multiply the value by 0.01 (100) to give the answer in percentage.
+The ‘Age’ column contains the age of individual players. The column was converted to number data type. The Overall Players’ Analysis (OVA) and Players Potential (POT) column were converted to percentage as written in the data dictionary. A custom column was created and the value divided by 100 to give the answer in percentage.
 
 ![image](https://user-images.githubusercontent.com/105908253/226147162-257d89a7-8214-438e-9da1-9190760a8127.png)
 
@@ -47,22 +47,22 @@ The column consists of inconsistent data entry. Some of the club’s name had nu
 ![image](https://user-images.githubusercontent.com/105908253/226147269-4af18ae9-1d89-4f1d-880c-d4c91fe65c31.png)
 
 # Contract:
-Filtering the ‘Contract’ column, I realized it contained inconsistent values. It contains values in 3 format, 2004~2021, free and 23rd July 2020 on loan. Thus, conditional formatting was used to achieve clean data.
+Filtering the ‘Contract’ column, I realized it contained inconsistent values which were written in 3 different format, 2004~2021, free and 23rd July 2020 on loan. Thus, conditional formatting was used to clean the contract column
 
 ![image](https://user-images.githubusercontent.com/105908253/226147283-fa47fc2e-94fd-4c45-a5de-b1f923b0497f.png)
 
-The delimiter was changed from ‘ ~ ’ to ‘ - ‘. A conditional formatting was used to separate the players who have active contract (2004-2021) from players on ‘loan’ and players who are ‘free’. I further created a custom column to calculate the contract duration of each player. The formula below was used.
+The delimiter was changed from ‘ ~ ’ to ‘ - ‘. A conditional formatting was used to separate the players who have active contract (2004-2021), from players on ‘loan’ and players who are ‘free’. I further created a custom column to calculate the contract duration of each player. The formula below was used.
 =If text.contains([contract],”-“), then Number.From(Text.AfterDelimiter([contract],”-“)) – Number.From(Text.BeforeDelimiter([contract],”-“)), else “No Contract”)
 
 ![image](https://user-images.githubusercontent.com/105908253/226147303-3220bff9-3a1b-4851-abf9-1646d6d7f790.png)
 
 # Position:
-The ‘Position’ column consist one or more positions the player has ever played in. The ‘position’ column was removed as there’s another column ‘Best Position’ which describe the best position for the player. This is best fit for analysis.
+The ‘Position’ column consist one or more positions the player had ever played in. The ‘position’ column was removed because another column named ‘Best Position’ which describe the best position for the player exist in the data. The Best Position was used in Place of the Position column.
 
 ![image](https://user-images.githubusercontent.com/105908253/226147384-b139f8ea-75de-4bab-ba8c-1e5a59673a6b.png)
 
 # Joined:
-The joined column was filtered to see if there are any inconsistencies in the data. The data has consistent data and the correct data type (date).
+The joined column was filtered to see if there are any inconsistencies value in the data. The data were consistent and had the correct data type (date).
 
 ![image](https://user-images.githubusercontent.com/105908253/226147391-477a3376-8ca7-4c0e-9111-9b3426973c23.png)
 
@@ -76,11 +76,11 @@ To solve the problem, I replaced the empty cells with ‘Null’.
 ![image](https://user-images.githubusercontent.com/105908253/226147409-4e1fba84-e809-4fba-9183-22c4a55ef108.png)
 
 # Height & Weight:
-The column contains inconsistent data. The value of height was entered in two different format- 120cm & 5’10” (foot&inches), while the ‘weight’ column has values entered in two format- ‘kg’ and ‘ibs’.
+The column contains inconsistent data. The value of height was entered in two different format. For example 120cm & 5’10” (foot&inches), while the ‘weight’ column had values entered in two different format- ‘kg’ and ‘lbs’.
 
 ![image](https://user-images.githubusercontent.com/105908253/226147418-84fcf11e-3f59-4720-9b13-5b96a35fdcb1.png)
 
-To achieve consistent data in this column, I converted the foot & inches values to cm. This was done using a formula to multiply the feet by 30.48 and the inches by 2.54 which is the standard conversion.
+To achieve consistent data in this column, I converted the foot & inches values to cm. This was done using a formula to multiply the feet by 30.48 and the inches by 2.54 which is the standard conversion rate.
 Let cm = if Text.Contains([Height],"cm") then Number.From( Text.BeforeDelimiter([Height],"cm")) else null, ft = Number.From ( Text.BeforeDelimiter([Height], "'")), inch = Number.From ( Text.BetweenDelimiters( [Height], "'", """")),
 Result = if cm is null then (ft*30.48) + (inch*2.54) else cm in Result
 
@@ -90,11 +90,11 @@ While for the weight column, I converted all the values in kg to lbs using the s
 ![image](https://user-images.githubusercontent.com/105908253/226147440-b2abd770-98f9-4bac-ae96-02757d398b51.png)
  
 # Value, Wage & Release Clause:
-The above columns had data type issues and the values with suffixes ‘M & k’ in front. Where M is for millions, ‘K’ for thousands and ‘€’ for euro.
+The above columns had data type issues and inconsistent values. The values with suffixes ‘M & k’. Where M is for millions, ‘K’ for thousands and ‘€’ for euro.
 
 ![image](https://user-images.githubusercontent.com/105908253/226147465-cfd6fd02-1f1b-41da-8fa1-8be6d112822d.png)
  
-To normalize the values, the ‘€’, ‘K’ & ‘M’ was removed. A custom column was created to to multiply the values with ‘K’ by 1000 and values with ‘M’ by 1000000 using the formula below.
+To normalize the values, the ‘€’, ‘K’ & ‘M’ was removed. A custom column was created to multiply the values with ‘K’ by 1000 and values with ‘M’ by 1000000 using the formula below.
 =IF Text.Contains([value],”M”) then Number.From(Text.beforeDelimiter([value],”M”))*1000000 else Number.From(Text.BeforeDelimiter([value],”K”))*1000)
 The data type was converted to whole number and the column remained.
 
@@ -109,7 +109,7 @@ The following columns contains rating on a scale of 1-5 with a special character
 
 ![image](https://user-images.githubusercontent.com/105908253/226147515-e5024c81-4236-4bfe-8298-1451c8a25331.png)
 
-The special character was replaced with space and the column names was written in full with the data type changed to whole number.
+The special character was removed and the column names was written in full with the data type changed to whole number.
 
 ![image](https://user-images.githubusercontent.com/105908253/226147519-db9d0fc5-687e-41ec-9575-cb4582011ffe.png)
 
@@ -123,7 +123,7 @@ A custom column was created to multiply the values with ‘K’ by 1000 using th
 ![image](https://user-images.githubusercontent.com/105908253/226147532-2a946f6d-4299-432c-9c55-3014672dac72.png)
 
 # Conclusion:
-After a thorough checking and cross-checking for errors, missing values, empty cells, outliers, and wrong data type. I can say the messy dataset is now clean and consistent which can now be used for analysis.
+After a thorough checking and cross-checking for errors, missing values, empty cells, outliers, and wrong data type. I can say the messy dataset is now clean and consistent which can now be use for analysis.
 I’m glad I participated in this challenge to horn and sharpen skill. Quite a lot of learning I did while taking up this task. What initially looked difficult and impossible has been done. Good to say I’m proud of myself.
 
 
