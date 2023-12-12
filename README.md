@@ -46,7 +46,7 @@ The column consists of inconsistent data entry. Some of the club’s names had n
 
 ![image](https://user-images.githubusercontent.com/105908253/226147269-4af18ae9-1d89-4f1d-880c-d4c91fe65c31.png)
 
-# Contract:
+# Contract: 
 Filtering the ‘Contract’ column, I realized it contained inconsistent values, which were written in 3 different formats, 2004~2021, free and 23rd July 2020 on loan. Thus, conditional formatting was used to clean the contract column.
 
 ![image](https://user-images.githubusercontent.com/105908253/226147283-fa47fc2e-94fd-4c45-a5de-b1f923b0497f.png)
